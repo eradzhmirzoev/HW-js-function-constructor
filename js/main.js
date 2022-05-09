@@ -48,7 +48,3 @@ hamburger.showStandart();
 hamburger.addModifier(CHEESE); 
 hamburger.addModifier(SALAD);
 hamburger.addModifier(TOPPING_MAYO);
-
-console.log(hamburger)
-
-
