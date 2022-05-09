@@ -31,11 +31,11 @@ function Hamburger(size) {
         this.arrPrices.push(modifier.price);
         this.arrCallories.push(modifier.calories);
 
-        let sumPrices = this.arrPrices.reduce((sum, current) => sum + current, 0);
-        let sumCallories = this.arrCallories.reduce((sum, current) => sum + current, 0);
+        this.addModifier.sumPrices = this.arrPrices.reduce((sum, current) => sum + current, 0);
+        this.addModifier.sumCallories = this.arrCallories.reduce((sum, current) => sum + current, 0);
 
-        console.log(`Цена c доп. элементами: ${modifier.name} - ${sumPrices + size.price} грн`);
-        console.log(`Каллории +: ${modifier.name} - ${sumCallories + size.calories}`);
+        console.log(`Цена c доп. элементами: ${modifier.name} - ${this.addModifier.sumPrices + size.price} грн`);
+        console.log(`Каллории +: ${modifier.name} - ${this.addModifier.sumCallories + size.calories}`);
         
     };
 }
@@ -49,5 +49,6 @@ hamburger.addModifier(CHEESE);
 hamburger.addModifier(SALAD);
 hamburger.addModifier(TOPPING_MAYO);
 
+console.log(hamburger)
 
 
